@@ -11,6 +11,8 @@ import java.util.ArrayList;
  * @author juanfe
  */
 public class Student {
+    private static final int MAX_SUBJECTS = 3;
+
     private String name;
     private String lastName;
     private String career;
@@ -34,7 +36,16 @@ public class Student {
     public void setSubjects(ArrayList<Subject> subjects) {
         this.subjects = subjects;
     }
-    
+
+    public boolean addSubject(Subject subject){
+        if ((this.subjects.size()>=MAX_SUBJECTS) ||(this.subjects.contains(subject))){
+            return false;
+        }else{
+            this.subjects.add(subject);
+            return true;
+        }
+    }
+
     public void setName(String name) {
         this.name = name;
     }
