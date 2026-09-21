@@ -1,5 +1,9 @@
 package com.juanfedevmaster.interfaces.repos;
 
-public interface IInventarioRepo {
+import java.util.List;
 
+import com.juanfedevmaster.dominio.Producto;
+
+public interface IInventarioRepo {
+     public List<Producto> getProductos();
 }

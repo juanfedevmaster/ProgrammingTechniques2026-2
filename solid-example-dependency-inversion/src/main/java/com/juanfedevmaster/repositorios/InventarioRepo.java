@@ -1,11 +1,12 @@
 package com.juanfedevmaster.repositorios;
 
 import com.juanfedevmaster.dominio.Producto;
+import com.juanfedevmaster.interfaces.repos.IInventarioRepo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InventarioRepo {
+public class InventarioRepo implements IInventarioRepo {
 
     private List<Producto> productos = null;
 
@@ -33,4 +34,5 @@ public class InventarioRepo {
     public List<Producto> getProductos() {
         return productos;
     }
+
 }

@@ -1,12 +1,13 @@
 package com.juanfedevmaster.servicios;
 
 import com.juanfedevmaster.dominio.Producto;
+import com.juanfedevmaster.interfaces.repos.IInventarioRepo;
 import com.juanfedevmaster.interfaces.servicios.IVenta;
 import com.juanfedevmaster.repositorios.InventarioRepo;
 
 public class Venta implements IVenta {
 
-    private InventarioRepo inventario;
+    private IInventarioRepo inventario;
 
     public Venta() {
         this.inventario = new InventarioRepo();
